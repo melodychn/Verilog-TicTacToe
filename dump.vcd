@@ -1,0 +1,873 @@
+$date
+	Sat Jun  1 21:28:00 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module game_tb $end
+$var wire 4 ! game_result [3:0] $end
+$var wire 8 " game_st [7:0] $end
+$var wire 9 # occ_player [8:0] $end
+$var wire 9 $ occ_pos [8:0] $end
+$var wire 9 % occ_square [8:0] $end
+$var wire 9 & sel_pos [8:0] $end
+$var wire 1 ' turnO $end
+$var wire 1 ( turnX $end
+$var reg 1 ) buttonO $end
+$var reg 1 * buttonX $end
+$var reg 9 + chk_occ_player [8:0] $end
+$var reg 9 , chk_occ_square [8:0] $end
+$var reg 4 - chk_result [3:0] $end
+$var reg 1 . clk $end
+$var reg 1 / flash_clk $end
+$var integer 32 0 i [31:0] $end
+$var integer 32 1 j [31:0] $end
+$var reg 1 2 reset $end
+$var reg 4 3 sel_pos_binary [3:0] $end
+$scope module TTT0 $end
+$var wire 1 4 buttonO $end
+$var wire 1 5 buttonX $end
+$var wire 1 6 clk $end
+$var wire 1 7 flash_clk $end
+$var wire 1 8 reset $end
+$var wire 9 9 sel_pos [8:0] $end
+$var wire 1 : valid $end
+$var wire 2 ; victory [1:0] $end
+$var reg 8 < game_st_ascii [7:0] $end
+$var reg 4 = game_state [3:0] $end
+$var reg 4 > nx_game_state [3:0] $end
+$var reg 9 ? occ_player [8:0] $end
+$var reg 9 @ occ_pos [8:0] $end
+$var reg 9 A occ_square [8:0] $end
+$var reg 1 B prevalid $end
+$var reg 1 C turnO $end
+$var reg 1 D turnX $end
+$var reg 1 E win1 $end
+$var reg 1 F win2 $end
+$var reg 1 G win3 $end
+$var reg 1 H win4 $end
+$var reg 1 I win5 $end
+$var reg 1 J win6 $end
+$var reg 1 K win7 $end
+$var reg 1 L win8 $end
+$var reg 1 M wincat $end
+$scope module validmove $end
+$var wire 9 N occ_square [8:0] $end
+$var wire 9 O sel_pos [8:0] $end
+$var wire 1 : valid $end
+$upscope $end
+$scope module checkvictory $end
+$var wire 9 P occ_player [8:0] $end
+$var wire 9 Q occ_square [8:0] $end
+$var wire 2 R victory [1:0] $end
+$upscope $end
+$upscope $end
+$scope module sel_pos_dec $end
+$var wire 4 S in [3:0] $end
+$var reg 9 T y [8:0] $end
+$upscope $end
+$scope module result1 $end
+$var wire 8 U game_st [7:0] $end
+$var reg 4 V game_result [3:0] $end
+$upscope $end
+$scope task chk_game_st $end
+$upscope $end
+$scope task chk_placement $end
+$upscope $end
+$scope task disp_gamestate $end
+$upscope $end
+$scope task load_move $end
+$upscope $end
+$scope task no_turn $end
+$upscope $end
+$scope task rst_turn $end
+$var integer 32 W cycles [31:0] $end
+$upscope $end
+$scope task tick $end
+$upscope $end
+$scope task turn $end
+$upscope $end
+$scope task wait_cycles $end
+$var integer 32 X cycles [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1010 X
+b1010 W
+b0 V
+bx U
+b1 T
+b0 S
+bx R
+bx Q
+bx P
+b1 O
+bx N
+xM
+xL
+xK
+xJ
+xI
+xH
+xG
+xF
+xE
+xD
+xC
+xB
+bx A
+bx @
+bx ?
+bx >
+bx =
+bx <
+bx ;
+x:
+b1 9
+18
+07
+06
+05
+04
+b0 3
+12
+b1010 1
+bx 0
+0/
+0.
+b0 -
+b0 ,
+b0 +
+0*
+0)
+x(
+x'
+b1 &
+bx %
+bx $
+bx #
+bx "
+b0 !
+$end
+#10000
+b1101110 <
+b1101110 "
+b1101110 U
+b1 >
+0C
+0'
+0D
+0(
+b0 =
+1:
+b0 ;
+b0 R
+0M
+0L
+0K
+0J
+0I
+0H
+0G
+0F
+0E
+0B
+b0 @
+b0 $
+b0 ?
+b0 #
+b0 P
+b0 A
+b0 %
+b0 N
+b0 Q
+0.
+06
+#20000
+1.
+16
+b1001 1
+#30000
+0.
+06
+#40000
+1.
+16
+b1000 1
+#50000
+0.
+06
+1/
+17
+#60000
+1.
+16
+b111 1
+#70000
+0.
+06
+#80000
+1.
+16
+b110 1
+#90000
+0.
+06
+#100000
+1.
+16
+b101 1
+0/
+07
+#110000
+0.
+06
+#120000
+1.
+16
+b100 1
+#130000
+0.
+06
+#140000
+1.
+16
+b11 1
+#150000
+0.
+06
+1/
+17
+#160000
+1.
+16
+b10 1
+#170000
+0.
+06
+#180000
+1.
+16
+b1 1
+#190000
+0.
+06
+#200000
+1D
+1(
+b1 =
+1.
+16
+02
+08
+b0 1
+0/
+07
+#210000
+0.
+06
+#220000
+b11 >
+1*
+15
+b100 T
+b100 &
+b100 9
+b100 O
+1.
+16
+b10 3
+b10 S
+b0 0
+#230000
+0:
+b100 ?
+b100 #
+b100 P
+b100 A
+b100 %
+b100 N
+b100 Q
+b100 >
+1B
+0D
+0(
+b11 =
+1.
+16
+#240000
+0*
+05
+0.
+06
+#250000
+b110 >
+b100 =
+b100 @
+b100 $
+1.
+16
+1/
+17
+#260000
+0.
+06
+#270000
+0B
+1C
+1'
+b110 =
+1.
+16
+#280000
+1:
+b1000 >
+1)
+14
+b10000 T
+b10000 &
+b10000 9
+b10000 O
+b100 3
+b100 S
+b1 0
+b100 +
+b100 ,
+0.
+06
+#290000
+0:
+1B
+b1001 >
+b10100 A
+b10100 %
+b10100 N
+b10100 Q
+0C
+0'
+b1000 =
+1.
+16
+#300000
+b10000 @
+b10000 $
+0)
+04
+0.
+06
+0/
+07
+#310000
+b1 >
+b1001 =
+1.
+16
+#320000
+0.
+06
+#330000
+1D
+1(
+b1 =
+1.
+16
+#340000
+1:
+0B
+b11 >
+1*
+15
+b10 T
+b10 &
+b10 9
+b10 O
+b1 3
+b1 S
+b10 0
+b10100 ,
+0.
+06
+#350000
+0:
+b110 ?
+b110 #
+b110 P
+b10110 A
+b10110 %
+b10110 N
+b10110 Q
+b100 >
+1B
+0D
+0(
+b11 =
+b110 @
+b110 $
+1.
+16
+1/
+17
+#360000
+0*
+05
+0.
+06
+#370000
+b110 >
+b100 =
+1.
+16
+#380000
+0.
+06
+#390000
+0B
+1C
+1'
+b110 =
+1.
+16
+#400000
+b1000 >
+1)
+14
+b100 T
+b100 &
+b100 9
+b100 O
+b10000 @
+b10000 $
+b10 3
+b10 S
+b11 0
+b110 +
+b10110 ,
+0.
+06
+0/
+07
+#410000
+b111 >
+0C
+0'
+b1000 =
+1.
+16
+#420000
+0)
+04
+0.
+06
+#430000
+b1000 V
+b1000 !
+b1000101 <
+b1000101 "
+b1000101 U
+1C
+1'
+b111 =
+1.
+16
+#440000
+b100 1
+b100 X
+b0 T
+b0 &
+b0 9
+b0 O
+b1101 3
+b1101 S
+b100 0
+b1000 -
+0.
+06
+#450000
+b110 @
+b110 $
+1.
+16
+1/
+17
+#460000
+b11 1
+0.
+06
+#470000
+1.
+16
+#480000
+b10 1
+0.
+06
+#490000
+1.
+16
+#500000
+b10000 @
+b10000 $
+b1 1
+0.
+06
+0/
+07
+#510000
+1.
+16
+#520000
+1:
+b1000 >
+1)
+14
+b1 T
+b1 &
+b1 9
+b1 O
+b0 3
+b0 S
+b101 0
+b0 1
+0.
+06
+#530000
+b0 V
+b0 !
+b1101110 <
+b1101110 "
+b1101110 U
+0:
+b10001 @
+b10001 $
+1B
+b1001 >
+b10111 A
+b10111 %
+b10111 N
+b10111 Q
+0C
+0'
+b1000 =
+1.
+16
+#540000
+0)
+04
+0.
+06
+#550000
+b1 >
+b1001 =
+b110 @
+b110 $
+1.
+16
+1/
+17
+#560000
+0.
+06
+#570000
+1D
+1(
+b1 =
+1.
+16
+#580000
+0B
+b11 >
+1*
+15
+b10000 T
+b10000 &
+b10000 9
+b10000 O
+b100 3
+b100 S
+b110 0
+b0 -
+b10111 ,
+0.
+06
+#590000
+b10 >
+0D
+0(
+b11 =
+1.
+16
+#600000
+b10001 @
+b10001 $
+0*
+05
+0.
+06
+0/
+07
+#610000
+b1000 V
+b1000 !
+b1000101 <
+b1000101 "
+b1000101 U
+1D
+1(
+b10 =
+1.
+16
+#620000
+1:
+b11 >
+1*
+15
+b100000 T
+b100000 &
+b100000 9
+b100000 O
+b101 3
+b101 S
+b111 0
+b1000 -
+0.
+06
+#630000
+b0 V
+b0 !
+b1101110 <
+b1101110 "
+b1101110 U
+0:
+b100110 ?
+b100110 #
+b100110 P
+b110111 A
+b110111 %
+b110111 N
+b110111 Q
+b100 >
+1B
+0D
+0(
+b11 =
+1.
+16
+#640000
+0*
+05
+0.
+06
+#650000
+b110 >
+b100 =
+b100110 @
+b100110 $
+1.
+16
+1/
+17
+#660000
+0.
+06
+#670000
+0B
+1C
+1'
+b110 =
+1.
+16
+#680000
+1:
+b1000 >
+1)
+14
+b100000000 T
+b100000000 &
+b100000000 9
+b100000000 O
+b1000 3
+b1000 S
+b1000 0
+b0 -
+b100110 +
+b110111 ,
+0.
+06
+#690000
+b10 ;
+b10 R
+0:
+1F
+1B
+b1001 >
+b100110111 A
+b100110111 %
+b100110111 N
+b100110111 Q
+0C
+0'
+b1000 =
+1.
+16
+#700000
+b100010001 @
+b100010001 $
+0)
+04
+0.
+06
+0/
+07
+#710000
+b1010 >
+b1001 =
+1.
+16
+#720000
+0.
+06
+#730000
+b10 V
+b10 !
+b1001111 <
+b1001111 "
+b1001111 U
+b1010 =
+1.
+16
+#740000
+1)
+14
+b0 T
+b0 &
+b0 9
+b0 O
+b1110 3
+b1110 S
+b1001 0
+b10 -
+b100110111 ,
+0.
+06
+#750000
+1.
+16
+1/
+17
+#760000
+b1 1
+b1 X
+12
+18
+b1 W
+b1111 3
+b1111 S
+b1010 0
+b110110000 +
+b111111111 ,
+0)
+04
+0.
+06
+#770000
+b0 V
+b0 !
+b1101110 <
+b1101110 "
+b1101110 U
+b1 >
+b0 =
+b0 ;
+b0 R
+0F
+0B
+b0 @
+b0 $
+b0 ?
+b0 #
+b0 P
+b0 A
+b0 %
+b0 N
+b0 Q
+1.
+16
+#780000
+02
+08
+b0 1
+0.
+06
+#790000
+1D
+1(
+b1 =
+1.
+16
+#800000
+1:
+b11 >
+1*
+15
+b10000 T
+b10000 &
+b10000 9
+b10000 O
+b100 3
+b100 S
+b1011 0
+0.
+06
+0/
+07
+#810000
+0:
+b10000 ?
+b10000 #
+b10000 P
+b10000 A
+b10000 %
+b10000 N
+b10000 Q
+b100 >
+1B
+0D
+0(
+b11 =
+1.
+16
+#820000
+0*
+05
+0.
+06
+#830000
+b110 >
+b100 =
+1.
+16
+#840000
+0.
+06
+#850000
+0B
+1C
+1'
+b110 =
+b10000 @
+b10000 $
+1.
+16
+1/
+17
+#860000
+b1100 0
+b0 -
+b10000 +
+b10000 ,
+0.
+06
